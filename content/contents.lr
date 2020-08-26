@@ -1,4 +1,6 @@
-_model: about
+_model: about-me
+---
+_template: about-me.html
 ---
 body:
 

@@ -1,5 +1,7 @@
 header {
 
+  font-weight: 200;
+
   ul, li {
     margin: 0;
     padding: 0;
@@ -7,10 +9,18 @@ header {
 
   li {
     list-style-type: none;
+    display: inline-flex;
   }
 
   a {
     text-decoration: none;
   }
 
+  a.active {
+    border-bottom: 1px solid $active-header-link;
+  }
+
+}
+
+@media(max-width: 750px) {
 }

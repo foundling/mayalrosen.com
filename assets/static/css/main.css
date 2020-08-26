@@ -4,12 +4,32 @@ html, body, body * {
   padding: 0;
   font-family: Arial; }
 
-header ul, header li {
-  margin: 0;
-  padding: 0; }
-header li {
-  list-style-type: none; }
-header a {
-  text-decoration: none; }
+img {
+  max-width: 100%; }
+
+a, p {
+  color: #282828; }
+
+p {
+  line-height: 1.5em; }
+
+h2 {
+  font-size: 1.5em; }
+
+body {
+  padding: 2%; }
+
+header {
+  font-weight: 200; }
+  header ul, header li {
+    margin: 0;
+    padding: 0; }
+  header li {
+    list-style-type: none;
+    display: inline-flex; }
+  header a {
+    text-decoration: none; }
+  header a.active {
+    border-bottom: 1px solid #ff8383; }
 
 /*# sourceMappingURL=main.css.map */
