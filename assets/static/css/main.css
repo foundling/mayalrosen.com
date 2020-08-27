@@ -4,32 +4,104 @@ html, body, body * {
   padding: 0;
   font-family: Arial; }
 
+h1 {
+  margin-bottom: 2%; }
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 1%; }
+
 img {
   max-width: 100%; }
+
+p {
+  margin-bottom: 1%;
+  line-height: 1.5em; }
 
 a, p {
   color: #282828; }
 
-p {
-  line-height: 1.5em; }
+a {
+  border-bottom: 1px dotted #ff8383;
+  text-decoration: none; }
+  a:hover {
+    color: #ff8383;
+    border-bottom: 1px solid #ff8383; }
 
-h2 {
-  font-size: 1.5em; }
+.page {
+  display: flex;
+  flex-direction: column;
+  padding: 0 25%;
+  margin-top: 100px; }
 
-body {
-  padding: 2%; }
+.page, header {
+  padding: 5% 25%; }
 
+h2, p {
+  margin-bottom: 4%; }
+
+@media (max-width: 1500px) {
+  .page {
+    margin-top: 40px; }
+
+  .page, header {
+    padding: 5% 15%; } }
+@media (max-width: 1000px) {
+  .page, header {
+    padding: 5% 5%; }
+
+  .page {
+    margin-top: 40px; } }
+@media (max-width: 750px) {
+  .page, header {
+    padding: 5% 5%; } }
 header {
+  background: whitesmoke;
   font-weight: 200; }
   header ul, header li {
     margin: 0;
     padding: 0; }
+  header a:not(.active):hover {
+    border-bottom: 1px solid transparent; }
+  header .logotype a:hover {
+    color: #282828; }
+  header .logotype h1 {
+    margin-bottom: 0; }
+  header li:not(.logotype) {
+    padding-left: 30px; }
+  header ul {
+    display: inline-flex;
+    align-items: baseline; }
   header li {
     list-style-type: none;
     display: inline-flex; }
   header a {
-    text-decoration: none; }
+    text-decoration: none;
+    border-bottom: 1px solid transparent; }
   header a.active {
     border-bottom: 1px solid #ff8383; }
+
+@media (max-width: 500px) {
+  header {
+    background: white; }
+    header ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; }
+    header li {
+      line-height: 1.5em; }
+    header li.logotype {
+      width: 100%;
+      padding-bottom: 10px; }
+    header li:not(.logotype) {
+      padding-left: 0px; } }
+.page__about-me {
+  margin-top: 50px; }
+  .page__about-me img.headshot {
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid whitesmoke;
+    margin-bottom: 4%; }
 
 /*# sourceMappingURL=main.css.map */

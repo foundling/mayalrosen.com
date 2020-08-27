@@ -1,0 +1,12 @@
+.page__about-me {
+
+  margin-top: 50px;
+
+  img.headshot {
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid $light-gray;
+    margin-bottom: 4%;
+  }
+}

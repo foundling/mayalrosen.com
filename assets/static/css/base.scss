@@ -5,26 +5,34 @@ html, body, body * {
   font-family: Arial;
 }
 
+h1 {
+  margin-bottom: 2%;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 1%;
+}
+
 img {
   max-width: 100%;
+}
+
+p {
+  margin-bottom: 1%;
+  line-height: 1.5em;
 }
 
 a, p {
   color: $text-default;
 }
 
-p {
-  line-height: 1.5em;
-}
+a {
+  border-bottom: 1px dotted $link-underline;
+  text-decoration: none;
 
-h2 {
-  font-size: 1.5em;
-}
-
-body {
-  padding: 2%; 
-}
-
-@media(max-width: 750px) {
-
+  &:hover {
+    color: $link-underline;
+    border-bottom: 1px solid $link-underline;
+  }
 }

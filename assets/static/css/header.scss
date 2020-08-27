@@ -1,10 +1,31 @@
 header {
 
+  background: whitesmoke;
+
   font-weight: 200;
 
   ul, li {
     margin: 0;
     padding: 0;
+  }
+
+  a:not(.active):hover {
+    border-bottom: 1px solid transparent;
+  }
+  .logotype {
+    a:hover {
+      color: $text-default;
+    }
+  }
+  .logotype h1 {
+    margin-bottom: 0;
+  }
+  li:not(.logotype) {
+    padding-left: 30px;
+  }
+  ul {
+    display: inline-flex;
+    align-items: baseline;
   }
 
   li {
@@ -14,6 +35,7 @@ header {
 
   a {
     text-decoration: none;
+    border-bottom: 1px solid transparent;
   }
 
   a.active {
@@ -22,5 +44,23 @@ header {
 
 }
 
-@media(max-width: 750px) {
+@media(max-width: 500px) {
+  header {
+    background: white;
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; 
+    }
+    li {
+      line-height: 1.5em;
+    }
+    li.logotype {
+      width: 100%;
+      padding-bottom: 10px;
+    }
+    li:not(.logotype) {
+      padding-left: 0px;
+    }
+  }
 }

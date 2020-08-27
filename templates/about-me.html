@@ -1,6 +1,6 @@
-{% extends "layout.html" %}
+{% extends "page.html" %}
 
 {% block body %}
-  <img src="{{ '/static/img/maya.png' | asseturl }}"></img>
+  <img class="headshot" src="{{ '/static/img/maya.png' | asseturl }}"></img>
   {{ this.body }}
 {% endblock %}

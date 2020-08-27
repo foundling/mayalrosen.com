@@ -1,0 +1,40 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  padding: 0 25%; 
+  margin-top: 100px;
+}
+
+.page, header {
+  padding: 5% 25%; 
+}
+
+h2, p {
+  margin-bottom: 4%;
+}
+
+@media(max-width: 1500px) {
+  .page {
+    margin-top: 40px;
+  }
+  .page, header {
+    padding: 5% 15%;
+  }
+}
+
+@media(max-width: 1000px) {
+  .page, header {
+    padding: 5% 5%;
+  }
+  .page {
+    margin-top: 40px;
+  }
+}
+
+@media(max-width: 750px) {
+  .page, header {
+    padding: 5% 5%;
+  }
+}
+
+

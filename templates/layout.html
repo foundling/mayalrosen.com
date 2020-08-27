@@ -5,13 +5,14 @@
     <link rel="stylesheet" href="{{ '/static/css/style.css'|asseturl }}">
     <title>Maya L. Rosen</title>
     <link rel="stylesheet" href="{{ '/static/css/main.css'|asseturl }}">
-    <link rel="manifest" href="{{ '/static/manifest.json'|asseturl }}">
+    <link rel="manifest"   href="{{ '/static/manifest.json'|asseturl }}">
     <link rel="shortcut icon" href="{{ '/static/favicon.ico'|asseturl }}">
     <meta name="theme-color" content="#000000">
   </head>
   <body>
     {% include 'header.html' %}
-    <main>{% block body %}{% endblock %}</main>
-    {% include 'footer.html' %}
+    <main class="page page__{{this.title}}">
+    {% block body %}{% endblock %}
+    </main>
   </body>
 </html>
