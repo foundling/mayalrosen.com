@@ -6,7 +6,7 @@
 }
 
 .page, header {
-  padding: 5% 25%; 
+  padding: 3% 25%; 
 }
 
 h2, p {
@@ -31,10 +31,8 @@ h2, p {
   }
 }
 
-@media(max-width: 750px) {
+@media(max-width: 850px) {
   .page, header {
     padding: 5% 5%;
   }
 }
-
-

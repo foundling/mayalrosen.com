@@ -1,0 +1,9 @@
+_template: education.html 
+---
+_model: education
+---
+name: Boston University
+---
+year: 2009-2015
+---
+publication: "Functional MRI and Behavioral Investigations of Long-Term Memory-Guidance of Visuospatial Attention"

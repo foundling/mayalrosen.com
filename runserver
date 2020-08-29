@@ -1,5 +1,12 @@
 #!/bin/bash
 
 # see this for starting/stopping sass process: https://superuser.com/questions/330520/kill-background-processes-started-by-bash-script
-/usr/local/bin/sass --watch ./assets/static/css/main.scss:./assets/static/css/main.css &
-lektor server -h 0.0.0.0
+
+if ! ps aux | grep sass | grep -v 'grep sass'; then
+  echo starting sass
+  /usr/local/bin/sass --watch ./assets/static/css/main.scss:./assets/static/css/main.css &
+else
+  echo sass is already running
+fi
+
+lektor server -h 0.0.0.0 -v

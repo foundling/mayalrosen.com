@@ -11,12 +11,17 @@ h2 {
   font-size: 1.5em;
   margin-bottom: 1%; }
 
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 2%; }
+
 img {
   max-width: 100%; }
 
 p {
   margin-bottom: 1%;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  font-weight: lighter; }
 
 a, p {
   color: #282828; }
@@ -35,7 +40,7 @@ a {
   margin-top: 100px; }
 
 .page, header {
-  padding: 5% 25%; }
+  padding: 3% 25%; }
 
 h2, p {
   margin-bottom: 4%; }
@@ -52,7 +57,7 @@ h2, p {
 
   .page {
     margin-top: 40px; } }
-@media (max-width: 750px) {
+@media (max-width: 850px) {
   .page, header {
     padding: 5% 5%; } }
 header {
@@ -81,7 +86,7 @@ header {
   header a.active {
     border-bottom: 1px solid #ff8383; }
 
-@media (max-width: 500px) {
+@media (max-width: 850px) {
   header {
     background: white; }
     header ul {
@@ -102,6 +107,67 @@ header {
     margin: 0 auto;
     border-radius: 50%;
     border: 5px solid whitesmoke;
-    margin-bottom: 4%; }
+    margin-bottom: 10%; }
+
+.page__publications li {
+  list-style-type: none; }
+
+.page__cv h2 {
+  margin-bottom: 0%;
+  margin-top: 4%; }
+.page__cv li {
+  list-style-type: none; }
+.page__cv .cv-download {
+  margin-bottom: 8%;
+  border: 0px solid transparent;
+  background: white;
+  width: fit-content;
+  padding: 12px;
+  border-bottom: 1px solid #ff8383;
+  display: inline-flex;
+  width: 180px;
+  align-items: center;
+  justify-content: space-evenly; }
+  .page__cv .cv-download:hover {
+    background: whitesmoke;
+    color: black; }
+.page__cv .education,
+.page__cv .teaching,
+.page__cv .awards {
+  margin-bottom: 4%; }
+.page__cv .awards__record {
+  padding: 10px;
+  background: whitesmoke; }
+  .page__cv .awards__record-year {
+    color: #ff8383; }
+.page__cv .teaching__record, .page__cv .education__record {
+  padding: 1% 0 0 0; }
+  .page__cv .teaching__record > li, .page__cv .education__record > li {
+    padding: 10px; }
+  .page__cv .teaching__record-year, .page__cv .education__record-year {
+    padding: 10px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: whitesmoke;
+    background: #ff8383;
+    align-self: flex-end; }
+  .page__cv .teaching__record-degree, .page__cv .teaching__record-position, .page__cv .teaching__record-course, .page__cv .education__record-degree, .page__cv .education__record-position, .page__cv .education__record-course {
+    color: #a7a7a7; }
+  .page__cv .teaching__record-university, .page__cv .teaching__record-position, .page__cv .teaching__record-degree, .page__cv .teaching__record-publication, .page__cv .teaching__record-course, .page__cv .education__record-university, .page__cv .education__record-position, .page__cv .education__record-degree, .page__cv .education__record-publication, .page__cv .education__record-course {
+    background: whitesmoke;
+    border-left: 1px solid #ff8383; }
+.page__cv .teaching__record-year {
+  align-self: flex-end; }
+.page__cv .awards__record {
+  justify-content: space-between; }
+.page__cv .awards__record {
+  width: 100%;
+  display: inline-flex; }
+  .page__cv .awards__record-year {
+    align-self: flex-end; }
+.page__cv .teaching__record,
+.page__cv .education__record {
+  display: flex;
+  flex-direction: column; }
 
 /*# sourceMappingURL=main.css.map */

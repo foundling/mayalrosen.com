@@ -1,0 +1,118 @@
+.page__cv {
+
+  h2 {
+    margin-bottom: 0%;
+    margin-top: 4%;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+
+  .cv-download {
+
+    margin-bottom: 8%;
+    border: 0px solid transparent;
+    background: white;
+    width: fit-content;
+    padding: 12px;
+    border-bottom: 1px solid $active-header-link;
+    display: inline-flex;
+    width: 180px;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &:hover {
+      background: whitesmoke;
+      color: black;
+    }
+  }
+
+
+  .education,
+  .teaching,
+  .awards {
+    margin-bottom: 4%;
+  }
+
+  .teaching,
+  .education,
+  .awards {
+  }
+
+  .awards {
+    &__record {
+      padding: 10px;
+      background: whitesmoke;
+      &-year {
+        color: $red;
+      }
+    }
+  }
+  .teaching, .education {
+
+    &__record {
+      padding: 1% 0 0 0;
+      > li {
+        padding: 10px;
+      }
+
+      &-year {
+        padding: 10px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        color: whitesmoke;
+        background: $red;
+        align-self: flex-end;
+      }
+
+      &-degree,
+      &-position,
+      &-course {
+        color: $gray;
+      }
+
+      &-university,
+      &-position,
+      &-degree,
+      &-publication,
+      &-course {
+        background: whitesmoke;
+        border-left: 1px solid $red;
+      }
+
+    }
+
+  }
+
+  .teaching {
+    &__record-year {
+      align-self: flex-end;
+    }
+  }
+
+  .awards {
+    &__record {
+      justify-content: space-between;
+    }
+
+  }
+
+  .awards {
+    &__record {
+      width: 100%;
+      display: inline-flex;
+      &-year {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .teaching__record,
+  .education__record {
+    display: flex;
+    flex-direction: column;
+  }
+
+}

@@ -1,5 +1,55 @@
 {% extends "layout.html" %}
 
 {% block body %}
-{{ this.body }}
+
+  {% set teaching = site.query('/cv/teaching') %}
+  {% set education = site.query('/cv/education') %}
+  {% set awards = site.query('/cv/awards') %}
+
+  <a class="cv-download" href="{{ '/static/download/MayaLRosenCV.pdf' | url }}">
+      Download CV<image src="/static/img/doc.svg"></image>
+  </a>
+
+  <h2>Education</h2>
+  <br>
+
+  <ul class="education">
+    {% for ed in education %}
+    <li>
+      <ul class="education__record">
+        <li class="education__record-year">{{ ed.year }}</li>
+        <li class="education__record-university">{{ ed.university }}</li>
+        <li class="education__record-degree">{{ ed.degree }}</li>
+        <li class="education__record-publication">{{ ed.publication }}</li>
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h2>Teaching Experience</h2>
+  <br>
+
+  <ul class="teaching">
+  {% for position in teaching %}
+    <ul class="teaching__record">
+      <li class="teaching__record-year">{{ position.year }}</li>
+      <li class="teaching__record-university">{{ position.university }}</li>
+      <li class="teaching__record-position">{{ position.position }}</li>
+      <li class="teaching__record-course">{{ position.course }}</li>
+    </ul>
+  {% endfor %}
+  </ul>
+
+  <h2>Awards and Honors</h2>
+  <br>
+
+  <ul class="awards">
+    {% for award in awards %}
+    <ul class="awards__record">
+      <li class="awards__record-title">{{ award.title }}</li>
+      <li class="awards__record-year">{{ award.year }}</li>
+    </ul>
+    {% endfor %}
+  </ul>
+
 {% endblock %}
