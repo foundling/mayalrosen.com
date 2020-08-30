@@ -2,7 +2,15 @@ html, body, body * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial; }
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400; }
 
 h1 {
   margin-bottom: 2%; }
@@ -20,8 +28,9 @@ img {
 
 p {
   margin-bottom: 1%;
-  line-height: 1.5em;
-  font-weight: lighter; }
+  line-height: 1.7em;
+  font-weight: lighter;
+  font-size: 18px; }
 
 a, p {
   color: #282828; }
@@ -113,13 +122,13 @@ header {
   list-style-type: none; }
 
 .page__cv h2 {
-  margin-bottom: 0%;
-  margin-top: 4%; }
+  margin-bottom: 0%; }
 .page__cv li {
   list-style-type: none; }
 .page__cv .cv-download {
   margin-bottom: 8%;
-  border: 0px solid transparent;
+  margin-top: -8%;
+  border: 1px solid #c5c5c5;
   background: white;
   width: fit-content;
   padding: 12px;
@@ -140,10 +149,18 @@ header {
   background: whitesmoke; }
   .page__cv .awards__record-year {
     color: #ff8383; }
+.page__cv .teaching > li, .page__cv .education > li {
+  margin-bottom: 5px; }
 .page__cv .teaching__record, .page__cv .education__record {
   padding: 1% 0 0 0; }
-  .page__cv .teaching__record > li, .page__cv .education__record > li {
+  .page__cv .teaching__record .cv-tab,
+  .page__cv .teaching__record .cv-folder, .page__cv .education__record .cv-tab,
+  .page__cv .education__record .cv-folder {
     padding: 10px; }
+  .page__cv .teaching__record .cv-folder, .page__cv .education__record .cv-folder {
+    background: whitesmoke;
+    border-left: 1px solid #ff8383;
+    padding: 20px 10px; }
   .page__cv .teaching__record-year, .page__cv .education__record-year {
     padding: 10px;
     border-top-left-radius: 3px;
@@ -154,8 +171,7 @@ header {
   .page__cv .teaching__record-degree, .page__cv .teaching__record-position, .page__cv .teaching__record-course, .page__cv .education__record-degree, .page__cv .education__record-position, .page__cv .education__record-course {
     color: #a7a7a7; }
   .page__cv .teaching__record-university, .page__cv .teaching__record-position, .page__cv .teaching__record-degree, .page__cv .teaching__record-publication, .page__cv .teaching__record-course, .page__cv .education__record-university, .page__cv .education__record-position, .page__cv .education__record-degree, .page__cv .education__record-publication, .page__cv .education__record-course {
-    background: whitesmoke;
-    border-left: 1px solid #ff8383; }
+    margin-bottom: 10px; }
 .page__cv .teaching__record-year {
   align-self: flex-end; }
 .page__cv .awards__record {

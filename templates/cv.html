@@ -17,10 +17,12 @@
     {% for ed in education %}
     <li>
       <ul class="education__record">
-        <li class="education__record-year">{{ ed.year }}</li>
-        <li class="education__record-university">{{ ed.university }}</li>
-        <li class="education__record-degree">{{ ed.degree }}</li>
-        <li class="education__record-publication">{{ ed.publication }}</li>
+        <li class="education__record-year cv-tab">{{ ed.year }}</li>
+        <ul class="cv-folder">
+          <li class="education__record-university">{{ ed.university }}</li>
+          <li class="education__record-degree">{{ ed.degree }}</li>
+          <li class="education__record-publication">{{ ed.publication }}</li>
+        </ul>
       </ul>
     </li>
     {% endfor %}
@@ -31,12 +33,16 @@
 
   <ul class="teaching">
   {% for position in teaching %}
-    <ul class="teaching__record">
-      <li class="teaching__record-year">{{ position.year }}</li>
-      <li class="teaching__record-university">{{ position.university }}</li>
-      <li class="teaching__record-position">{{ position.position }}</li>
-      <li class="teaching__record-course">{{ position.course }}</li>
-    </ul>
+    <li>
+      <ul class="teaching__record">
+        <li class="teaching__record-year cv-tab">{{ position.year }}</li>
+        <ul class="cv-folder">
+          <li class="teaching__record-university">{{ position.university }}</li>
+          <li class="teaching__record-position">{{ position.position }}</li>
+          <li class="teaching__record-course">{{ position.course }}</li>
+        </ul>
+      </ul>
+    </li>
   {% endfor %}
   </ul>
 

@@ -2,7 +2,16 @@ html, body, body * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial;
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
 }
 
 h1 {
@@ -25,8 +34,9 @@ img {
 
 p {
   margin-bottom: 1%;
-  line-height: 1.5em;
+  line-height: 1.7em;
   font-weight: lighter;
+  font-size: 18px;
 }
 
 a, p {

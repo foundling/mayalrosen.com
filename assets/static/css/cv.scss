@@ -2,7 +2,6 @@
 
   h2 {
     margin-bottom: 0%;
-    margin-top: 4%;
   }
 
   li {
@@ -13,7 +12,8 @@
   .cv-download {
 
     margin-bottom: 8%;
-    border: 0px solid transparent;
+    margin-top: -8%;
+    border: 1px solid rgb(197, 197, 197);
     background: white;
     width: fit-content;
     padding: 12px;
@@ -52,10 +52,20 @@
   }
   .teaching, .education {
 
+    > li {
+      margin-bottom: 5px;
+    }
     &__record {
       padding: 1% 0 0 0;
-      > li {
+      .cv-tab,
+      .cv-folder {
         padding: 10px;
+
+      }
+      .cv-folder {
+        background: whitesmoke;
+        border-left: 1px solid $red;
+        padding: 20px 10px;
       }
 
       &-year {
@@ -78,8 +88,7 @@
       &-degree,
       &-publication,
       &-course {
-        background: whitesmoke;
-        border-left: 1px solid $red;
+        margin-bottom: 10px;
       }
 
     }
