@@ -6,11 +6,15 @@
   {% set education = site.query('/cv/education') %}
   {% set awards = site.query('/cv/awards') %}
 
-  <a class="cv-download" href="{{ '/static/download/MayaLRosenCV.pdf' | url }}">
-      Download CV<image src="/static/img/doc.svg"></image>
-  </a>
+  <h2>CV</h2>
 
-  <h2>Education</h2>
+  <div class="cv-download">
+    <a class="cv-download__link" href="{{ '/static/download/MayaLRosenCV.pdf' | url }}">
+        Download CV<image src="/static/img/doc.svg" />
+    </a>
+  </div>
+
+  <h3>Education</h3>
   <br>
 
   <ul class="education">
@@ -28,7 +32,7 @@
     {% endfor %}
   </ul>
 
-  <h2>Teaching Experience</h2>
+  <h3>Teaching Experience</h3>
   <br>
 
   <ul class="teaching">
@@ -46,7 +50,7 @@
   {% endfor %}
   </ul>
 
-  <h2>Awards and Honors</h2>
+  <h3>Awards and Honors</h3>
   <br>
 
   <ul class="awards">

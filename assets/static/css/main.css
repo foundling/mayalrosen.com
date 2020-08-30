@@ -17,11 +17,19 @@ h1 {
 
 h2 {
   font-size: 1.5em;
-  margin-bottom: 1%; }
+  margin-bottom: 1%;
+  color: #282828;
+  font-weight: 100;
+  border-bottom: 1px solid rgba(255, 131, 131, 0.7);
+  width: fit-content;
+  padding: 10px 10px 10px 0px; }
+
+.page > h2 {
+  margin-bottom: 7%; }
 
 h3 {
   font-size: 1.2em;
-  margin-bottom: 2%; }
+  margin-bottom: 4%; }
 
 img {
   max-width: 100%; }
@@ -106,9 +114,21 @@ header {
       line-height: 1.5em; }
     header li.logotype {
       width: 100%;
-      padding-bottom: 10px; }
+      padding-bottom: 30px; }
     header li:not(.logotype) {
-      padding-left: 0px; } }
+      padding-left: 0px;
+      padding-bottom: 5px; }
+      header li:not(.logotype):before {
+        content: '> ';
+        padding-right: 10px;
+        color: #ff8383; } }
+footer {
+  background: whitesmoke;
+  padding: 3% 25% 6% 25%; }
+
+@media (max-width: 850px) {
+  footer {
+    padding: 5% 5%; } }
 .page__about-me {
   margin-top: 50px; }
   .page__about-me img.headshot {
@@ -120,26 +140,30 @@ header {
 
 .page__publications li {
   list-style-type: none; }
+.page__publications strong {
+  font-weight: initial; }
 
-.page__cv h2 {
-  margin-bottom: 0%; }
+.page__cv h3 {
+  margin-bottom: 0; }
 .page__cv li {
   list-style-type: none; }
 .page__cv .cv-download {
-  margin-bottom: 8%;
-  margin-top: -8%;
-  border: 1px solid #c5c5c5;
-  background: white;
-  width: fit-content;
-  padding: 12px;
-  border-bottom: 1px solid #ff8383;
-  display: inline-flex;
-  width: 180px;
-  align-items: center;
-  justify-content: space-evenly; }
-  .page__cv .cv-download:hover {
-    background: whitesmoke;
-    color: black; }
+  display: inline-flex; }
+  .page__cv .cv-download .cv-download__link {
+    align-items: center;
+    background: white;
+    border: 1px solid #c5c5c5;
+    border-radius: 3px;
+    display: inline-flex;
+    justify-content: space-evenly;
+    margin-bottom: 8%;
+    padding: 12px;
+    width: 30%;
+    height: 100%; }
+    .page__cv .cv-download .cv-download__link:hover {
+      background: whitesmoke;
+      border: 1px solid black;
+      color: black; }
 .page__cv .education,
 .page__cv .teaching,
 .page__cv .awards {
@@ -185,5 +209,9 @@ header {
 .page__cv .education__record {
   display: flex;
   flex-direction: column; }
+
+@media (max-width: 850px) {
+  .page__cv .cv-download .cv-download__link {
+    width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */
