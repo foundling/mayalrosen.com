@@ -2,7 +2,7 @@ _model: about-me
 ---
 _template: about-me.html
 ---
-title: about-me
+title: About Me
 ---
 body:
 

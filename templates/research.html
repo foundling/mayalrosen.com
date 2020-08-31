@@ -1,5 +1,17 @@
 {% extends "layout.html" %}
+{% from 'macros/table-of-contents.html' import render_toc %}
+{% from 'macros/navigate-to-top.html' import render_nav_button %}
 
 {% block body %}
-{{ this.body }}
+
+  <h2>{{ this.title }}</h2>
+  {{ render_nav_button() }}
+
+  <aside class="table-of-contents">
+    <h3>Table of Contents</h3>
+    {{ render_toc(this.body) }}
+  </aside>
+
+  {{ this.body }}
+
 {% endblock %}

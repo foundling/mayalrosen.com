@@ -64,3 +64,15 @@ a {
     border-bottom: 1px solid $link-underline;
   }
 }
+
+.hidden {
+  display: none;
+}
+
+.nav-to-top {
+  background: $red;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+}

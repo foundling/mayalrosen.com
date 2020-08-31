@@ -50,6 +50,15 @@ a {
     color: #ff8383;
     border-bottom: 1px solid #ff8383; }
 
+.hidden {
+  display: none; }
+
+.nav-to-top {
+  background: #ff8383;
+  position: fixed;
+  bottom: 20px;
+  right: 20px; }
+
 .page {
   display: flex;
   flex-direction: column;
@@ -96,7 +105,8 @@ header {
     align-items: baseline; }
   header li {
     list-style-type: none;
-    display: inline-flex; }
+    display: inline-flex;
+    align-items: baseline; }
   header a {
     text-decoration: none;
     border-bottom: 1px solid transparent; }
@@ -123,9 +133,27 @@ header {
         padding-right: 10px;
         color: #ff8383; } }
 footer {
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.8em;
   background: whitesmoke;
   padding: 3% 25% 6% 25%; }
+  footer a.link-alt {
+    border: 1px solid transparent;
+    background: #ff8383;
+    color: whitesmoke;
+    padding: 3px 2px 0px 2px; }
+    footer a.link-alt:hover {
+      background: whitesmoke;
+      border: 1px solid #ff8383;
+      color: #282828; }
 
+@media (max-width: 1500px) {
+  footer {
+    padding: 3% 15% 6% 15%; } }
+@media (max-width: 1000px) {
+  footer {
+    padding: 3% 5% 6% 5%; } }
 @media (max-width: 850px) {
   footer {
     padding: 5% 5%; } }
@@ -137,6 +165,21 @@ footer {
     border-radius: 50%;
     border: 5px solid whitesmoke;
     margin-bottom: 10%; }
+
+@media (max-width: 850px) {
+  .page__about-me {
+    padding-top: 0; } }
+.page__research .table-of-contents {
+  width: fit-content;
+  background: whitesmoke;
+  padding: 5%;
+  margin-bottom: calc(5% + 40px); }
+  .page__research .table-of-contents h3 {
+    margin-bottom: 3%; }
+  .page__research .table-of-contents li {
+    list-style-type: none;
+    line-height: 1.7em;
+    margin-left: 20px; }
 
 .page__publications li {
   list-style-type: none; }
@@ -184,7 +227,7 @@ footer {
   .page__cv .teaching__record .cv-folder, .page__cv .education__record .cv-folder {
     background: whitesmoke;
     border-left: 1px solid #ff8383;
-    padding: 20px 10px; }
+    padding: 20px 30px; }
   .page__cv .teaching__record-year, .page__cv .education__record-year {
     padding: 10px;
     border-top-left-radius: 3px;
@@ -199,7 +242,10 @@ footer {
 .page__cv .teaching__record-year {
   align-self: flex-end; }
 .page__cv .awards__record {
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding: 20px 30px; }
+  .page__cv .awards__record-year {
+    margin-right: -15px; }
 .page__cv .awards__record {
   width: 100%;
   display: inline-flex; }
@@ -213,5 +259,10 @@ footer {
 @media (max-width: 850px) {
   .page__cv .cv-download .cv-download__link {
     width: 100%; } }
+.nav-to-top {
+  padding: 10px 10px;
+  color: whitesmoke; }
+  .nav-to-top:hover {
+    color: whitesmoke; }
 
 /*# sourceMappingURL=main.css.map */

@@ -9,9 +9,10 @@
     <link rel="shortcut icon" href="{{ '/static/favicon.ico'|asseturl }}">
     <meta name="theme-color" content="#000000">
   </head>
-  <body>
+  <body id="top">
     {% include 'header.html' %}
-    <main class="page page__{{this.title}}">{% block body %}{% endblock %}</main>
+    <main class="page page__{{ this.title | slug }}">{% block body %}{% endblock %}</main>
     {% include 'footer.html' %}
+    <script src="{{'static/js/nav-to-top.js' | asseturl }}"></script>
   </body>
 </html>
