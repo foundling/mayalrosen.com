@@ -28,7 +28,6 @@ const shouldShowNavToTop = () => {
   if (toc) {
 
     const aboveFold = isAboveFold(toc)
-    console.log(aboveFold)
     if (aboveFold && navToTopButton.classList.contains('hidden')) {
       navToTopButton.classList.remove('hidden')
     } else if (!aboveFold && !navToTopButton.classList.contains('hidden')) {
