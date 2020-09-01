@@ -1,4 +1,16 @@
+/* 
+ *
+ * Table of Contents & Navigation Button
+ *
+ * Behavior: when the user scrolls beyond the TOC, a 'to-top' button appears
+ * and the table of contents shifts to a fixed position (if viewport is wide enough). 
+ *
+ */
+
+// make sure to IIFE this thing
+
 const toc = document.querySelector('.table-of-contents')
+
 const getDistanceFromTop = (el) => {
 
   let dist = 0 
@@ -14,9 +26,11 @@ const getDistanceFromTop = (el) => {
 }
 
 const isAboveFold = (el) => {
+
   const windowTopOffset = window.pageYOffset
   const tocBottomOffset = getDistanceFromTop(el)
   return tocBottomOffset < windowTopOffset
+
 }
 
 const showOrHideNavToTop = () => {
@@ -28,13 +42,22 @@ const showOrHideNavToTop = () => {
   if (toc) {
 
     const aboveFold = isAboveFold(toc)
-    if (aboveFold && navToTopButton.classList.contains('hidden')) {
-      navToTopButton.classList.remove('hidden')
-    } else if (!aboveFold && !navToTopButton.classList.contains('hidden')) {
-      navToTopButton.classList.add('hidden')
-    } 
+
+    if (aboveFold) {
+      if (navToTopButton.classList.contains('hidden')) {
+        navToTopButton.classList.remove('hidden')
+        toc.classList.add('to-the-side')
+      }
+    } else {
+      if (!navToTopButton.classList.contains('hidden')) {
+        navToTopButton.classList.add('hidden')
+        toc.classList.remove('to-the-side')
+      }
+    }
+
   }
 
 }
 
+showOrHideNavToTop()
 document.addEventListener('scroll', showOrHideNavToTop)

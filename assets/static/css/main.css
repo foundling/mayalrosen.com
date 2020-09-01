@@ -80,6 +80,31 @@ h2, p {
 @media (max-width: 850px) {
   .page, header {
     padding: 5% 5%; } }
+footer {
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.8em;
+  background: whitesmoke;
+  padding: 3% 25% 6% 25%; }
+  footer a.link-alt {
+    border: 1px solid transparent;
+    background: #ff8383;
+    color: whitesmoke;
+    padding: 3px 2px 0px 2px; }
+    footer a.link-alt:hover {
+      background: whitesmoke;
+      border: 1px solid #ff8383;
+      color: #282828; }
+
+@media (max-width: 1500px) {
+  footer {
+    padding: 3% 15% 6% 15%; } }
+@media (max-width: 1000px) {
+  footer {
+    padding: 3% 5% 6% 5%; } }
+@media (max-width: 850px) {
+  footer {
+    padding: 5% 5%; } }
 header {
   background: whitesmoke;
   font-weight: 200; }
@@ -126,31 +151,23 @@ header {
         content: '> ';
         padding-right: 10px;
         color: #ff8383; } }
-footer {
-  text-align: left;
-  font-size: 14px;
-  line-height: 1.8em;
-  background: whitesmoke;
-  padding: 3% 25% 6% 25%; }
-  footer a.link-alt {
-    border: 1px solid transparent;
-    background: #ff8383;
-    color: whitesmoke;
-    padding: 3px 2px 0px 2px; }
-    footer a.link-alt:hover {
-      background: whitesmoke;
-      border: 1px solid #ff8383;
-      color: #282828; }
+.nav-to-top {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+  color: #ff8383;
+  border: 1px solid #ff8383;
+  background: white;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 10px; }
+  .nav-to-top.hidden {
+    visibility: hidden;
+    opacity: 0; }
+  .nav-to-top:hover {
+    background: whitesmoke; }
 
-@media (max-width: 1500px) {
-  footer {
-    padding: 3% 15% 6% 15%; } }
-@media (max-width: 1000px) {
-  footer {
-    padding: 3% 5% 6% 5%; } }
-@media (max-width: 850px) {
-  footer {
-    padding: 5% 5%; } }
 .page__about-me {
   margin-top: 50px; }
   .page__about-me img.headshot {
@@ -163,23 +180,6 @@ footer {
 @media (max-width: 850px) {
   .page__about-me {
     padding-top: 0; } }
-.page__research .table-of-contents {
-  width: fit-content;
-  background: whitesmoke;
-  padding: 5%;
-  margin-bottom: calc(5% + 40px); }
-  .page__research .table-of-contents h3 {
-    margin-bottom: 3%; }
-  .page__research .table-of-contents li {
-    list-style-type: none;
-    line-height: 1.7em;
-    margin-left: 20px; }
-
-.page__publications li {
-  list-style-type: none; }
-.page__publications strong {
-  font-weight: initial; }
-
 .page__cv h3 {
   margin-bottom: 0; }
 .page__cv li {
@@ -253,14 +253,33 @@ footer {
 @media (max-width: 850px) {
   .page__cv .cv-download .cv-download__link {
     width: 100%; } }
-.nav-to-top {
-  background: #ff8383;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 10px;
-  color: whitesmoke; }
-  .nav-to-top:hover {
-    color: whitesmoke; }
+.page__publications li {
+  list-style-type: none; }
+.page__publications strong {
+  font-weight: initial; }
+
+.page__research .table-of-contents {
+  width: fit-content;
+  background: whitesmoke;
+  padding: 3%;
+  margin-bottom: calc(1% + 40px); }
+  .page__research .table-of-contents.to-the-side {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    padding: 2%;
+    font-size: 0.7em;
+    border: 1px solid #282828;
+    background: rgba(255, 255, 255, 0.9); }
+  .page__research .table-of-contents .component__table-of-contents-header {
+    margin-bottom: 3%; }
+  .page__research .table-of-contents .component__table-of-contents-list-item {
+    list-style-type: none;
+    line-height: 1.7em;
+    margin-left: 20px; }
+
+@media (max-width: 850px) {
+  .table-of-contents.to-the-side {
+    position: static !important; } }
 
 /*# sourceMappingURL=main.css.map */

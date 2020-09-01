@@ -1,10 +1,17 @@
-{% macro render_toc(body) %}
+{% macro render_toc(body, header='Table of Contents') %}
 
-  <ul class="toc">
-    {% for item in body.toc recursive %}
-      <li><a href="#{{ item.anchor }}">{{ item.title }}</a>{%
-           if item.children %}<ul>{{ loop(item.children) }}</ul>{% endif %}</li>
-      {% endfor %}
-  </ul>
+  <div class="component__table-of-contents">
+    <h3 class="component__table-of-contents-header">{{header}}</h3>
+    <ul class="component__table-of-contents-list">
+      {% for item in body.toc recursive %}
+        <li class="component__table-of-contents-list-item">
+          <a href="#{{ item.anchor }}">{{ item.title }}</a>
+          {%if item.children %}
+            <ul>{{ loop(item.children) }}</ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+  </div>
 
 {% endmacro %}

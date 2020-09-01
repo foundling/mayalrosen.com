@@ -1,11 +1,12 @@
 @import "colors";
 @import "base";
 @import "layout";
-@import "header";
-@import "footer";
-@import "about";
-@import "research";
-@import "publications";
-@import "cv";
-@import "nav-to-top";
+@import "components/footer";
+@import "components/header";
+@import "components/nav-to-top";
+@import "components/table-of-contents";
+@import "pages/about";
+@import "pages/cv";
+@import "pages/publications";
+@import "pages/research";
 

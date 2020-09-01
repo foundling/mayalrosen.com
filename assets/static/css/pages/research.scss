@@ -1,0 +1,41 @@
+.page__research {
+
+  .table-of-contents {
+
+    width: fit-content;
+    background: whitesmoke;
+    padding: 3%;
+    margin-bottom: calc(1% + 40px);
+
+
+    &.to-the-side {
+      position: fixed;
+      left: 20px;
+      top: 20px;
+      padding: 2%;
+      font-size: 0.7em;
+      border: 1px solid $text-default;
+      background: rgba(255,255,255,0.9);
+    }
+
+    .component__table-of-contents-header {
+      margin-bottom: 3%;
+    }
+
+    .component__table-of-contents-list-item {
+      list-style-type: none;
+      line-height: 1.7em;
+      margin-left: 20px;
+    }
+
+  }
+
+}
+
+@media(max-width: 850px) {
+  .table-of-contents {
+    &.to-the-side {
+      position: static !important;
+    }
+  }
+}
