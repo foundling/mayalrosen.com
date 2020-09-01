@@ -4,7 +4,9 @@ _template: about-me.html
 ---
 title: About Me
 ---
-body:
+toc: false
+---
+content:
 
 ## Research
 

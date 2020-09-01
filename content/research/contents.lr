@@ -2,7 +2,9 @@ _model: research
 ---
 title: Research
 ---
-body: 
+toc: true
+---
+content: 
 
 ### Mechanisms of the Income-Achievement Gap
 

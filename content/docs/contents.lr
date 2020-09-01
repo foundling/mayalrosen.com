@@ -2,6 +2,8 @@ _model: docs
 ---
 title: DOCS
 ---
+toc: true
+---
 body:
 
 ## Creating and Updating Content
@@ -12,7 +14,6 @@ For example, to update the content found at YOUR-WEBSITE.com/publications, you w
 
 ALEX: make a screencast of basics.
 
-
 ## Adding an auto-generated Table of Contents
 
 The contents.lr file has a 'toc' property set to false by default.  If you set it to 'true', a table of contents will be present that links to the sections of that page.
@@ -20,7 +21,6 @@ The contents.lr file has a 'toc' property set to false by default.  If you set i
 ## Adding an auto-generated Table of Contents
 
 The contents.lr file has a 'nav_link' property set to false by default.  If you set it to 'true', the site navigation header will now contain a link to that page.
-
 
 ## Using Markdown
 
