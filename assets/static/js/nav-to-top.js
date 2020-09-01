@@ -1,3 +1,4 @@
+const toc = document.querySelector('.table-of-contents')
 const getDistanceFromTop = (el) => {
 
   let dist = 0 
@@ -18,10 +19,9 @@ const isAboveFold = (el) => {
   return tocBottomOffset < windowTopOffset
 }
 
-const shouldShowNavToTop = () => {
+const showOrHideNavToTop = () => {
 
   const windowTopOffset = window.pageYOffset
-  const toc = document.querySelector('.table-of-contents')
   const navToTopButton = document.querySelector('.nav-to-top')
   const page = document.querySelector('.page') 
 
@@ -37,5 +37,4 @@ const shouldShowNavToTop = () => {
 
 }
 
-
-document.addEventListener('scroll', shouldShowNavToTop)
+document.addEventListener('scroll', showOrHideNavToTop)

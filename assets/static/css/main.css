@@ -51,13 +51,7 @@ a {
     border-bottom: 1px solid #ff8383; }
 
 .hidden {
-  display: none; }
-
-.nav-to-top {
-  background: #ff8383;
-  position: fixed;
-  bottom: 20px;
-  right: 20px; }
+  visibility: hidden; }
 
 .page {
   display: flex;
@@ -260,6 +254,10 @@ footer {
   .page__cv .cv-download .cv-download__link {
     width: 100%; } }
 .nav-to-top {
+  background: #ff8383;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   padding: 10px 10px;
   color: whitesmoke; }
   .nav-to-top:hover {

@@ -66,13 +66,5 @@ a {
 }
 
 .hidden {
-  display: none;
-}
-
-.nav-to-top {
-  background: $red;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-
+  visibility: hidden;
 }

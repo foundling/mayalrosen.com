@@ -1,0 +1,27 @@
+_model: docs
+---
+title: DOCS
+---
+body:
+
+## Creating and Updating Content
+
+When updating the site content for a particular page or 'url', find that url's corresponding folder inside of /content. each folder inside of /content (for example, /content/publications) contains a 'contents.lr' file with a 'body' section that is used for the content of that page.
+
+For example, to update the content found at YOUR-WEBSITE.com/publications, you would need to go to /content/publications/contents.lr and update the content inside of the 'body' property with valid Markdown or HTML.
+
+ALEX: make a screencast of basics.
+
+
+## Adding an auto-generated Table of Contents
+
+The contents.lr file has a 'toc' property set to false by default.  If you set it to 'true', a table of contents will be present that links to the sections of that page.
+
+## Adding an auto-generated Table of Contents
+
+The contents.lr file has a 'nav_link' property set to false by default.  If you set it to 'true', the site navigation header will now contain a link to that page.
+
+
+## Using Markdown
+
+The content for this site should be rendered in Markdown (you can use plain HTML, which is a subset of Markdown, but is a bit more cumbersome way to format content). Markdown is a useful shorthand format for formatting HTML. For reference, see this [Syntax Guide](https://www.markdownguide.org/basic-syntax).
