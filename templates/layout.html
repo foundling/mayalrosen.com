@@ -10,9 +10,28 @@
     <meta name="theme-color" content="#000000">
   </head>
   <body id="top">
+    {% from 'macros/table-of-contents.html' import render_toc %}
     {% include 'header.html' %}
-    <main class="page page__{{ this.title | slug }}">{% block body %}{% endblock %}</main>
+
+    <main class="page page__{{ this.title | slug }}">
+
+      {% if this.show_title %}
+      <h2>{{ this.title }}</h2>
+      {% endif %}
+
+      {% if this.toc %}
+        <aside class="table-of-contents">
+          {{ render_toc(this.content) }}
+        </aside>
+      {% endif %}
+
+      {% block body %}{% endblock %}
+
+    </main>
+
     {% include 'footer.html' %}
+
     <script src="{{'static/js/table-of-contents.js' | asseturl }}"></script>
+
   </body>
 </html>

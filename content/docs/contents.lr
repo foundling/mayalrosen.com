@@ -4,7 +4,9 @@ title: DOCS
 ---
 toc: true
 ---
-body:
+show_title: true
+---
+content:
 
 ## Creating and Updating Content
 
