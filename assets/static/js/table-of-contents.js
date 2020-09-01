@@ -46,12 +46,12 @@ const showOrHideNavToTop = () => {
     if (aboveFold) {
       if (navToTopButton.classList.contains('hidden')) {
         navToTopButton.classList.remove('hidden')
-        toc.classList.add('to-the-side')
+        //toc.classList.add('to-the-side')
       }
     } else {
       if (!navToTopButton.classList.contains('hidden')) {
         navToTopButton.classList.add('hidden')
-        toc.classList.remove('to-the-side')
+        //toc.classList.remove('to-the-side')
       }
     }
 

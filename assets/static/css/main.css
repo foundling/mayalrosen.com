@@ -87,14 +87,13 @@ footer {
   background: whitesmoke;
   padding: 3% 25% 6% 25%; }
   footer a.link-alt {
-    border: 1px solid transparent;
-    background: #ff8383;
-    color: whitesmoke;
-    padding: 3px 2px 0px 2px; }
+    border: 1px solid #ff8383;
+    color: #282828;
+    padding: 1px 2px 0px 2px; }
     footer a.link-alt:hover {
-      background: whitesmoke;
+      background: #ff8383;
       border: 1px solid #ff8383;
-      color: #282828; }
+      color: whitesmoke; }
 
 @media (max-width: 1500px) {
   footer {
@@ -263,23 +262,11 @@ header {
   background: whitesmoke;
   padding: 3%;
   margin-bottom: calc(1% + 40px); }
-  .page__research .table-of-contents.to-the-side {
-    position: fixed;
-    left: 20px;
-    top: 20px;
-    padding: 2%;
-    font-size: 0.7em;
-    border: 1px solid #282828;
-    background: rgba(255, 255, 255, 0.9); }
   .page__research .table-of-contents .component__table-of-contents-header {
     margin-bottom: 3%; }
   .page__research .table-of-contents .component__table-of-contents-list-item {
     list-style-type: none;
     line-height: 1.7em;
     margin-left: 20px; }
-
-@media (max-width: 850px) {
-  .table-of-contents.to-the-side {
-    position: static !important; } }
 
 /*# sourceMappingURL=main.css.map */
