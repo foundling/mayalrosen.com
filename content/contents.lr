@@ -4,7 +4,7 @@ _template: about-me.html
 ---
 title: About Me
 ---
-toc: false
+show_title: false
 ---
 content:
 

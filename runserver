@@ -9,4 +9,4 @@ else
   echo sass is already running
 fi
 
-lektor server -h 0.0.0.0 -v
+lektor server --prune -h 0.0.0.0 -v

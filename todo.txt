@@ -1,4 +1,3 @@
-- finish table of contents styles so that at larger viewports, it's fixed to the left when below the fold
 - finish authoring guide that covers basic framework ideas, content authoring, navigation and toc, with screencast demo.
 - make 'navigation' a model property so that they can be rendered or not by the user
 - make 'toc' a model property so that they can be rendered or not by the user
