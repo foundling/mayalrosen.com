@@ -90,9 +90,13 @@ ul, h2, p {
 @media (max-width: 1500px) {
   .page, header {
     padding: 5% 15%; } }
-@media (max-width: 1000px) {
+/*
+@media(max-width: 1000px) {
   .page, header {
-    padding: 3% 25% 3%; } }
+    padding: 3% 25% 3%; 
+  }
+}
+*/
 @media (max-width: 850px) {
   .page {
     padding: 0% 5%; }
@@ -136,7 +140,8 @@ header {
   header .logotype a:hover {
     color: #282828; }
   header .logotype h1 {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    white-space: nowrap; }
   header li:not(.logotype) {
     padding-left: 30px; }
   header ul {
@@ -191,12 +196,15 @@ header {
 .page__about-me img.headshot {
   max-width: 250px;
   margin: 0 auto;
+  margin-top: 40px;
   border-radius: 50%;
   border: 5px solid whitesmoke; }
 
 @media (max-width: 850px) {
   .page__about-me {
-    padding-top: 0; } }
+    padding-top: 0; }
+    .page__about-me img.headshot {
+      margin-top: 0px; } }
 .page__cv h3 {
   margin-bottom: 0; }
 .page__cv li {
