@@ -6,8 +6,15 @@
 }
 
 .page, header {
-  padding: 3% 25%; 
+  padding: 3% 25% 3%; 
 }
+.page {
+  padding: 0% 25%; 
+}
+
+header {
+  padding: 3% 25% 3%; 
+ }
 
 ul, h2, p {
   margin-bottom: 4%;
@@ -24,7 +31,7 @@ ul, h2, p {
 
 @media(max-width: 1000px) {
   .page, header {
-    padding: 5% 5%;
+    padding: 3% 25% 3%; 
   }
   .page {
     margin-top: 40px;
@@ -32,7 +39,10 @@ ul, h2, p {
 }
 
 @media(max-width: 850px) {
-  .page, header {
-    padding: 5% 5%;
+  .page {
+    padding: 0% 5%;
+  }
+  header {
+    padding: 3% 5%;
   }
 }

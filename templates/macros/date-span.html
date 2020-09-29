@@ -1,0 +1,9 @@
+{% macro date_span(date_start, date_end) %}
+
+  {% if date_start == date_end %}
+    {{ date_start }}
+  {% else %}
+    {{ date_start }} - {{ date_end or 'Present' }}
+  {% endif %}
+
+{% endmacro %}

@@ -76,7 +76,13 @@ a {
   margin-top: 100px; }
 
 .page, header {
-  padding: 3% 25%; }
+  padding: 3% 25% 3%; }
+
+.page {
+  padding: 0% 25%; }
+
+header {
+  padding: 3% 25% 3%; }
 
 ul, h2, p {
   margin-bottom: 4%; }
@@ -89,13 +95,16 @@ ul, h2, p {
     padding: 5% 15%; } }
 @media (max-width: 1000px) {
   .page, header {
-    padding: 5% 5%; }
+    padding: 3% 25% 3%; }
 
   .page {
     margin-top: 40px; } }
 @media (max-width: 850px) {
-  .page, header {
-    padding: 5% 5%; } }
+  .page {
+    padding: 0% 5%; }
+
+  header {
+    padding: 3% 5%; } }
 footer {
   text-align: left;
   font-size: 14px;
@@ -186,11 +195,10 @@ header {
 .page__about-me {
   margin-top: 50px; }
   .page__about-me img.headshot {
-    width: fit-content;
+    max-width: 250px;
     margin: 0 auto;
     border-radius: 50%;
-    border: 5px solid whitesmoke;
-    margin-bottom: 10%; }
+    border: 5px solid whitesmoke; }
 
 @media (max-width: 850px) {
   .page__about-me {

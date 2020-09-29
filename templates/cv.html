@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+{% from 'macros/date-span.html' import date_span %}
 
 {% block title %}
   <h2>{{ this.title }}</h2>
@@ -6,15 +7,51 @@
 
 {% block body %}
 
-  {% set teaching = site.query('/cv/teaching') %}
-  {% set education = site.query('/cv/education') %}
-  {% set awards = site.query('/cv/awards') %}
+  {% set teaching = site.query('/cv/teaching').order_by('-year_end') %}
+  {% set education = site.query('/cv/education').order_by('-year_end') %}
+  {% set awards = site.query('/cv/awards').order_by('-year') %}
+  {% set grants = site.query('/cv/grants').order_by('-year_end') %}
+  {% set appointments = site.query('/cv/appointments').order_by('-year_end') %}
 
+  <li></li>
   <div class="cv-download">
     <a class="cv-download__link" href="{{ '/static/download/MayaLRosenCV.pdf' | url }}">
-        Download CV<image src="/static/img/doc.svg" />
+      <span>Download Full CV</span><image src="/static/img/doc.svg" />
     </a>
   </div>
+
+  <h3>Academic Appointments</h3>
+  <br>
+  <ul class="grants">
+    {% for appointment in appointments %}
+    <li>
+      <ul class="education__record">
+        <li class="education__record-year cv-tab">{{ date_span(appointment.year_start, appointment.year_end) }}</li>
+        <ul class="cv-folder">
+          <li class="education__record-university">{{ appointment.university }}</li>
+          <li class="education__record-degree">{{ appointment.title }}</li>
+        </ul>
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h3>Grants</h3>
+  <br>
+  <ul class="grants">
+    {% for grant in grants %}
+    <li>
+      <ul class="education__record">
+        <li class="education__record-year cv-tab">{{ date_span(grant.year_start, grant.year_end) }}</li>
+        <ul class="cv-folder">
+          <li class="education__record-university">{{ grant.institution }}</li>
+          <li class="education__record-degree">{{ grant.title }}</li>
+        </ul>
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>
+
 
   <h3>Education</h3>
   <br>
@@ -23,7 +60,7 @@
     {% for ed in education %}
     <li>
       <ul class="education__record">
-        <li class="education__record-year cv-tab">{{ ed.year }}</li>
+        <li class="education__record-year cv-tab">{{ ed.year_start }} - {{ ed.year_end or "Present "}}</li>
         <ul class="cv-folder">
           <li class="education__record-university">{{ ed.university }}</li>
           <li class="education__record-degree">{{ ed.degree }}</li>
@@ -41,7 +78,7 @@
   {% for position in teaching %}
     <li>
       <ul class="teaching__record">
-        <li class="teaching__record-year cv-tab">{{ position.year }}</li>
+        <li class="teaching__record-year cv-tab">{{ date_span(position.year_start, position.year_end) }}</li>
         <ul class="cv-folder">
           <li class="teaching__record-university">{{ position.university }}</li>
           <li class="teaching__record-position">{{ position.position }}</li>
@@ -59,7 +96,7 @@
     {% for award in awards %}
     <ul class="awards__record">
       <li class="awards__record-title">{{ award.title }}</li>
-      <li class="awards__record-year">{{ award.year }}</li>
+      <li class="awards__record-year">{{award.year}}</li>
     </ul>
     {% endfor %}
   </ul>
