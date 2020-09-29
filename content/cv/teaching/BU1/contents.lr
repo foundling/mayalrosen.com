@@ -2,7 +2,9 @@ _model: teaching
 ---
 university: Boston University 
 ---
-year: 2015
+year_start: 2015
+---
+year_end: 2015
 ---
 course: PS101, Introduction to Psychology
 ---

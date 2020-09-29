@@ -2,7 +2,9 @@ _model: teaching
 ---
 university: Boston University 
 ---
-year: 2011
+year_start: 2011
+---
+year_end: 2011
 ---
 course: PS 336, Cognitive Psychology
 ---

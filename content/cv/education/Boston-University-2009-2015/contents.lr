@@ -4,6 +4,8 @@ degree: PhD, Psychology
 ---
 university: Boston University 
 ---
-year: 2009 - 2015
+year_start: 2009
+---
+year_end: 2015
 ---
 publication: "Functional MRI and Behavioral Investigations of Long-Term Memory-Guidance of Visuospatial Attention"
