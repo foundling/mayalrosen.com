@@ -3,6 +3,7 @@
   img.headshot {
     max-width: 250px;
     margin: 0 auto;
+    margin-top: 40px;
     border-radius: 50%;
     border: 5px solid $light-gray;
   }
@@ -13,6 +14,11 @@
 
   .page__about-me {
     padding-top: 0;
+
+    img.headshot {
+      margin-top: 0px;
+    }
+
   }
 
 }

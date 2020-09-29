@@ -74,6 +74,10 @@ a {
   padding: 0 25%;
   margin-top: 100px; }
 
+header {
+  width: 100%;
+  max-width: 100%; }
+
 .page, header {
   padding: 3% 25%; }
 

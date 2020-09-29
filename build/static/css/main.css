@@ -71,40 +71,38 @@ a {
 .page {
   display: flex;
   flex-direction: column;
-  padding: 0 25%; }
+  padding: 0 25%;
+  margin-top: 100px; }
 
 .page, header {
-  padding: 3% 25% 3%; }
-
-.page {
-  padding: 0% 25%;
-  margin-top: 40px;
-  margin-bottom: 40px; }
-
-header {
-  padding: 3% 25% 3%; }
+  padding: 3% 25%; }
 
 ul, h2, p {
   margin-bottom: 4%; }
 
 @media (max-width: 1500px) {
+  .page {
+    margin-top: 40px; }
+
   .page, header {
     padding: 5% 15%; } }
 @media (max-width: 1000px) {
   .page, header {
-    padding: 3% 25% 3%; } }
-@media (max-width: 850px) {
-  .page {
-    padding: 0% 5%; }
+    padding: 5% 5%; }
 
-  header {
-    padding: 3% 5%; } }
+  .page {
+    margin-top: 40px; } }
+@media (max-width: 850px) {
+  .page, header {
+    padding: 5% 5%; } }
 footer {
+  padding: 0% 15%;
+  color: rgba(0, 0, 0, 0.6);
   text-align: left;
   font-size: 14px;
   line-height: 1.8em;
   background: whitesmoke;
-  padding: 3% 25% 6% 25%; }
+  padding: 1% 35%; }
   footer a.link-alt {
     border: 1px solid #ff8383;
     color: #282828;
@@ -116,7 +114,7 @@ footer {
 
 @media (max-width: 1500px) {
   footer {
-    padding: 3% 15% 6% 15%; } }
+    padding: 1% 15%; } }
 @media (max-width: 1000px) {
   footer {
     padding: 3% 5% 6% 5%; } }
@@ -134,7 +132,8 @@ header {
   header .logotype a:hover {
     color: #282828; }
   header .logotype h1 {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    white-space: nowrap; }
   header li:not(.logotype) {
     padding-left: 30px; }
   header ul {
@@ -189,12 +188,15 @@ header {
 .page__about-me img.headshot {
   max-width: 250px;
   margin: 0 auto;
+  margin-top: 40px;
   border-radius: 50%;
   border: 5px solid whitesmoke; }
 
 @media (max-width: 850px) {
   .page__about-me {
-    padding-top: 0; } }
+    padding-top: 0; }
+    .page__about-me img.headshot {
+      margin-top: 0px; } }
 .page__cv h3 {
   margin-bottom: 0; }
 .page__cv li {
