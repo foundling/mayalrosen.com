@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   padding: 0 25%; 
-  margin-top: 100px;
 }
 
 .page, header {
@@ -10,6 +9,8 @@
 }
 .page {
   padding: 0% 25%; 
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 header {
@@ -21,9 +22,6 @@ ul, h2, p {
 }
 
 @media(max-width: 1500px) {
-  .page {
-    margin-top: 40px;
-  }
   .page, header {
     padding: 5% 15%;
   }
@@ -32,9 +30,6 @@ ul, h2, p {
 @media(max-width: 1000px) {
   .page, header {
     padding: 3% 25% 3%; 
-  }
-  .page {
-    margin-top: 40px;
   }
 }
 
