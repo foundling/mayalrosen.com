@@ -13,6 +13,6 @@ usage() {
 
 echo building and pushing ...
 
-lektor build -O build && rsync -aP build/* $user@$host:~/www/mayalrosen.com/ 
+rm -rf ./build/* && lektor build -O build && rsync -aP build/* $user@$host:~/www/mayalrosen.com/ 
 
 echo done!

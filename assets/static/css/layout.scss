@@ -3,6 +3,9 @@
   flex-direction: column;
   padding: 0 25%; 
   margin-top: 100px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 header {

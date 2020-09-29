@@ -72,7 +72,10 @@ a {
   display: flex;
   flex-direction: column;
   padding: 0 25%;
-  margin-top: 100px; }
+  margin-top: 100px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; }
 
 header {
   width: 100%;
@@ -278,5 +281,8 @@ header {
   list-style-type: none; }
 .page__publications strong {
   font-weight: initial; }
+
+.page__research img {
+  padding-top: 40px; }
 
 /*# sourceMappingURL=main.css.map */
