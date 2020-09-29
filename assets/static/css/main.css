@@ -71,38 +71,30 @@ a {
 .page {
   display: flex;
   flex-direction: column;
-  padding: 0 25%; }
+  padding: 0 25%;
+  margin-top: 100px; }
 
 .page, header {
-  padding: 3% 25% 3%; }
-
-.page {
-  padding: 0% 25%;
-  margin-top: 40px;
-  margin-bottom: 40px; }
-
-header {
-  padding: 3% 25% 3%; }
+  padding: 3% 25%; }
 
 ul, h2, p {
   margin-bottom: 4%; }
 
 @media (max-width: 1500px) {
+  .page {
+    margin-top: 40px; }
+
   .page, header {
     padding: 5% 15%; } }
-/*
-@media(max-width: 1000px) {
+@media (max-width: 1000px) {
   .page, header {
-    padding: 3% 25% 3%; 
-  }
-}
-*/
-@media (max-width: 850px) {
-  .page {
-    padding: 0% 5%; }
+    padding: 5% 5%; }
 
-  header {
-    padding: 3% 5%; } }
+  .page {
+    margin-top: 40px; } }
+@media (max-width: 850px) {
+  .page, header {
+    padding: 5% 5%; } }
 footer {
   padding: 0% 15%;
   color: rgba(0, 0, 0, 0.6);
