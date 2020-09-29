@@ -3,7 +3,7 @@
   img.headshot {
     max-width: 250px;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 0px;
     border-radius: 50%;
     border: 5px solid $light-gray;
   }
@@ -16,7 +16,6 @@
     padding-top: 0;
 
     img.headshot {
-      margin-top: 0px;
     }
 
   }
