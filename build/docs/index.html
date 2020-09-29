@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="">
+    <title>Maya L. Rosen</title>
+    <link rel="stylesheet" href="../static/css/main.css?h=a8ee8d11">
+    <link rel="manifest"   href="../static/manifest.json?h=22959b5d">
+    <link rel="shortcut icon" href="../static/favicon.ico?h=3158e4e0">
+    <meta name="theme-color" content="#000000">
+  </head>
+  <body id="top">
+    
+    <header>
+  <nav>
+    <ul>
+      <li class="logotype">
+        <a class="" href="/">
+          <h1>Maya L. Rosen</h1>
+        </a>
+      </li>
+      <li>
+        <a class="" href="/research">Research</a>
+      </li>
+      <li>
+        <a class="" href="/publications">Publications</a>
+      </li>
+      <li>
+        <a class="" href="/cv">CV</a>
+      </li>
+      <li>
+        <a class="" href="/equity-diversity-inclusion">Equity, Diversity & Inclusion</a>
+      </li>
+    </ul>
+  <nav>
+</header>
+
+    <main class="page page__user-documentation">
+
+      
+      <h2>User Documentation</h2>
+      
+
+      
+        <aside class="table-of-contents">
+          
+
+  <a class="hidden nav-to-top" href="#top">^</a>
+
+  <div class="component__table-of-contents">
+    <h3 class="component__table-of-contents-header">Table of Contents</h3>
+    <ul class="component__table-of-contents-list">
+      
+        <li class="component__table-of-contents-list-item">
+          <a href="#the-lektor-cms">The Lektor CMS</a>
+          
+        </li>
+        
+        <li class="component__table-of-contents-list-item">
+          <a href="#some-explanation">Some Explanation</a>
+          
+            <ul>
+        <li class="component__table-of-contents-list-item">
+          <a href="#file-to-url-relationships">File-to-URL Relationships</a>
+          
+        </li>
+        </ul>
+          
+        </li>
+        
+        <li class="component__table-of-contents-list-item">
+          <a href="#creating-and-updating-content">Creating and Updating Content</a>
+          
+            <ul>
+        <li class="component__table-of-contents-list-item">
+          <a href="#using-markdown">Using Markdown</a>
+          
+        </li>
+        </ul>
+          
+        </li>
+        
+        <li class="component__table-of-contents-list-item">
+          <a href="#adding-a-table-of-contents">Adding a Table of Contents</a>
+          
+        </li>
+        
+    </ul>
+  </div>
+
+
+        </aside>
+      
+
+      
+  <h2 id="the-lektor-cms">The Lektor CMS</h2><p>This site is built on top of the <a href="https://getlektor.com">Lektor flat-file content management system</a>. The main benefit of a 'flat-file' CMS over something like Wordpress is that you don't need to install and run a database or know anything about coding. Plus minimalism, light-weightedness, and security. Since no database is required (the data resides in regular, files), you can run the dev server, make changes, run 'build', and send it up to the server yourself, and your site is up-to-date.</p>
+<p>Here's the process:</p>
+<ul>
+<li>start the local server with the <code>runserver</code> script</li>
+<li>make changes in /content sub-directories</li>
+<li>run <code>push</code> to send it to your server</li>
+<li>stop server</li>
+</ul>
+<h2 id="some-explanation">Some Explanation</h2><h3 id="file-to-url-relationships">File-to-URL Relationships</h3><p>There is a straightforward correspondence between page urls and the root-level 'contents' directory.  Each directory inside of '/contents' corresponds to a url segment with the same name.  And inside each of those directories, each sub-directory corresponds to an additional url segment.  For example:</p>
+<p>path on computer: BLOG_ROOT/contents/a/b/contents.lr</p>
+<p>url: <a href="https://YOUR_WEBSITE_DOMAIN.com/a/b">https://YOUR_WEBSITE_DOMAIN.com/a/b</a></p>
+<p>This means that the text in the 'contents' section of /contents/a/b/contents.lr will show up at https://<yoursite>.com/a/b.</p>
+<h2 id="creating-and-updating-content">Creating and Updating Content</h2><p>When updating the site content for a particular page or 'url', find that url's corresponding folder inside of /content. each folder inside of /content (for example, /content/publications) contains a 'contents.lr' file with a 'body' section that is used for the content of that page.</p>
+<p>For example, to update the content found at YOUR-WEBSITE.com/publications, you would need to go to /content/publications/contents.lr and update the content inside of the 'body' property with valid Markdown or HTML.</p>
+<h3 id="using-markdown">Using Markdown</h3><p>The content for this site should be rendered in Markdown (you can use plain HTML, which is a subset of Markdown, but is a bit more cumbersome way to format content). Markdown is a useful shorthand format for formatting HTML. For reference, see this <a href="https://www.markdownguide.org/basic-syntax">Syntax Guide</a>.</p>
+<h2 id="adding-a-table-of-contents">Adding a Table of Contents</h2><p>The contents.lr file has a 'toc' property set to false by default.  If you set it to 'true', a table of contents will be present that links to the sections of that page.</p>
+
+
+
+    </main>
+
+    <footer>
+  <span class="copyright">© Maya Rosen, 2020. All Rights Reserved |</span>
+  <span class="developer">Site built with 
+    <a class="link-alt" href="https://getlektor.com">Lektor</a> by 
+    <a class="link-alt" href="https://alexramsdell.com/projects">Alex Ramsdell</a>.
+  </span>
+</footer>
+
+    <script src="../static/js/table-of-contents.js?h=dbb76905"></script>
+
+  </body>
+</html>

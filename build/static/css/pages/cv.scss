@@ -1,0 +1,150 @@
+.page__cv {
+
+  h2 {
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+
+  .cv-download {
+    display: inline-flex;
+
+    .cv-download__link {
+
+      align-items: center;
+      background: white;
+      border: 1px solid rgb(197, 197, 197);
+      border-radius: 3px;
+      display: inline-flex;
+      justify-content: space-evenly;
+      margin-bottom: 8%;
+      padding: 12px;
+      width: 30%;
+      height: 100%;
+
+      &:hover {
+        background: whitesmoke;
+        border: 1px solid black;
+        color: black;
+      }
+    }
+  }
+
+
+  .education,
+  .teaching,
+  .awards {
+    margin-bottom: 4%;
+  }
+
+  .teaching,
+  .education,
+  .awards {
+  }
+
+  .awards {
+    &__record {
+      padding: 10px;
+      background: whitesmoke;
+      &-year {
+        color: $red;
+      }
+    }
+  }
+  .teaching, .education {
+
+    > li {
+      margin-bottom: 5px;
+    }
+    &__record {
+      padding: 1% 0 0 0;
+      .cv-tab,
+      .cv-folder {
+        padding: 10px;
+
+      }
+      .cv-folder {
+        background: whitesmoke;
+        border-left: 1px solid $red;
+        padding: 20px 30px;
+      }
+
+      &-year {
+        padding: 10px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        color: whitesmoke;
+        background: $red;
+        align-self: flex-end;
+      }
+
+      &-degree,
+      &-position,
+      &-course {
+        color: $gray;
+      }
+
+      &-university,
+      &-position,
+      &-degree,
+      &-publication,
+      &-course {
+        margin-bottom: 10px;
+      }
+
+    }
+
+  }
+
+  .teaching {
+    &__record-year {
+      align-self: flex-end;
+    }
+  }
+
+  .awards {
+    &__record {
+      justify-content: space-between;
+      padding: 20px 30px;
+      &-year {
+        margin-right: -15px;
+      }
+    }
+
+  }
+
+  .awards {
+    &__record {
+      width: 100%;
+      display: inline-flex;
+      &-year {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .teaching__record,
+  .education__record {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media(max-width: 850px) {
+
+  .page__cv {
+    .cv-download {
+      .cv-download__link {
+        width: 100%;
+      }
+    }
+  }
+
+}

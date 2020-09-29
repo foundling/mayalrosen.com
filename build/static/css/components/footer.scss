@@ -1,12 +1,10 @@
 footer {
 
-  padding: 0% 15%;
-  color: rgba(0,0,0,0.6); 
   text-align: left;
   font-size: 14px;
   line-height: 1.8em;
   background: whitesmoke;
-  padding: 1% 35%;
+  padding: 3% 25% 6% 25%;
 
   a.link-alt {
     border: 1px solid $red; 
@@ -22,7 +20,7 @@ footer {
 
 @media(max-width: 1500px) {
   footer {
-    padding: 1% 15%;
+    padding: 3% 15% 6% 15%;
   }
 }
 

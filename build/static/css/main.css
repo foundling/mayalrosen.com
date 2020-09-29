@@ -100,13 +100,11 @@ ul, h2, p {
   header {
     padding: 3% 5%; } }
 footer {
-  padding: 0% 15%;
-  color: rgba(0, 0, 0, 0.6);
   text-align: left;
   font-size: 14px;
   line-height: 1.8em;
   background: whitesmoke;
-  padding: 1% 35%; }
+  padding: 3% 25% 6% 25%; }
   footer a.link-alt {
     border: 1px solid #ff8383;
     color: #282828;
@@ -118,7 +116,7 @@ footer {
 
 @media (max-width: 1500px) {
   footer {
-    padding: 1% 15%; } }
+    padding: 3% 15% 6% 15%; } }
 @media (max-width: 1000px) {
   footer {
     padding: 3% 5% 6% 5%; } }

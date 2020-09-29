@@ -1,0 +1,93 @@
+html, body, body * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+}
+
+h1 {
+  margin-bottom: 2%;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 1%;
+  color: $text-default;
+  font-weight: 100;
+  border-bottom: 1px solid rgba(255, 131, 131, 0.7);
+  width: fit-content;
+  padding: 10px 10px 10px 0px;
+}
+
+.page {
+  > h2 {
+    margin-bottom: 7%;
+  }
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 4%;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  margin-bottom: 1%;
+  line-height: 1.7em;
+  font-weight: lighter;
+  font-size: 18px;
+
+}
+
+a, p {
+  color: $text-default;
+}
+
+a {
+  border-bottom: 1px dotted $link-underline;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-underline;
+    border-bottom: 1px solid $link-underline;
+  }
+}
+
+.table-of-contents {
+
+  width: fit-content;
+  background: whitesmoke;
+  padding: 3%;
+  margin-bottom: calc(1% + 40px);
+
+  .component__table-of-contents-header {
+    margin-bottom: 3%;
+  }
+
+  .component__table-of-contents-list-item {
+    list-style-type: none;
+    line-height: 1.7em;
+    margin-left: 20px;
+  }
+
+}
+
+.hidden {
+  visibility: hidden;
+}
