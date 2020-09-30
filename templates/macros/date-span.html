@@ -2,6 +2,8 @@
 
   {% if date_start == date_end %}
     {{ date_start }}
+  {% elif date_end == 9999  %}
+    {{ date_start }} - Present
   {% else %}
     {{ date_start }} - {{ date_end or 'Present' }}
   {% endif %}
