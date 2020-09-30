@@ -8,7 +8,7 @@
 {% block body %}
 
   {% set teaching = site.query('/cv/teaching').order_by('-year_end') %}
-  {% set education = site.query('/cv/education').order_by('-year_end') %}
+  {% set education = site.query('/cv/education').order_by('-year_completed') %}
   {% set awards = site.query('/cv/awards').order_by('-year') %}
   {% set grants = site.query('/cv/grants').order_by('-year_end') %}
   {% set appointments = site.query('/cv/appointments').order_by('-year_end') %}
@@ -60,7 +60,7 @@
     {% for ed in education %}
     <li>
       <ul class="education__record">
-        <li class="education__record-year cv-tab">{{ ed.year_start }} - {{ ed.year_end or "Present "}}</li>
+        <li class="education__record-year cv-tab">{{ ed.year_completed }}</li>
         <ul class="cv-folder">
           <li class="education__record-university">{{ ed.university }}</li>
           <li class="education__record-degree">{{ ed.degree }}</li>
